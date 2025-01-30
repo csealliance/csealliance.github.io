@@ -1,11 +1,11 @@
-function Home() {
+function Home({ onNavigate }) {
     return (
         <div data-name="home-page">
-            <Hero />
+            <Hero onNavigate={onNavigate} />
             <Features />
-            <Programs />
+            <Programs onNavigate={onNavigate} />
             <Stats />
-            <CallToAction />
+            <CallToAction onNavigate={onNavigate} />
         </div>
     );
 }

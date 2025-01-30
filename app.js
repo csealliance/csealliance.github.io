@@ -1,16 +1,22 @@
 function App() {
     const [currentPage, setCurrentPage] = React.useState('home');
+    const [selectedProgram, setSelectedProgram] = React.useState(null);
 
     const renderPage = () => {
         switch(currentPage) {
             case 'membership':
                 return <Membership />;
+            case 'program-details':
+                return <ProgramDetails program={selectedProgram} />;
             default:
-                return <Home />;
+                return <Home onNavigate={navigate} />;
         }
     };
 
-    const navigate = (page) => {
+    const navigate = (page, data = null) => {
+        if (data) {
+            setSelectedProgram(data);
+        }
         setCurrentPage(page);
         window.scrollTo(0, 0);
     };
