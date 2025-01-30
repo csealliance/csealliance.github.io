@@ -1,0 +1,35 @@
+.program-card {
+    background: white;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.program-content {
+    flex-grow: 1;
+}
+
+.program-details {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.program-btn {
+    margin-top: 1rem;
+    padding: 0.75rem;
+    background: #e60012;
+    color: white;
+    border-radius: 0.25rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.program-btn:hover {
+    background: #dc2626;
+}
