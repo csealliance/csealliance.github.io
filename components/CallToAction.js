@@ -1,4 +1,4 @@
-function CallToAction() {
+function CallToAction({ onNavigate }) {
     return (
         <section className="hero-gradient py-20" data-name="cta">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -8,7 +8,7 @@ function CallToAction() {
                 <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto" data-name="cta-description">
                     Join our alliance today and get access to resources, support, and a community of forward-thinking Canadian businesses.
                 </p>
-                <button className="btn-secondary" data-name="cta-button">
+                <button className="btn-secondary" data-name="cta-button" onClick={() => onNavigate('membership')}>
                     Become a Member
                 </button>
             </div>
